@@ -2,15 +2,13 @@ var express = require('express');
 var app = express();
 var port = 8080;
 
+// Show app where routes are
+var router = require('./app/routes');
+app.use('/', router); // (express middleware function)
+
 // Start the server
 app.listen(port, function() {
 	console.log('App started');
-});
-
-// Add a route
-// req is request, res is response
-app.get('/', function(req, res) { 
-	res.send('Hello world!');
 });
 
 // Package nodemon:
