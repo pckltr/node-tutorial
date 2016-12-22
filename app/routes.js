@@ -13,7 +13,11 @@ router.get('/', function(req, res) {
 });
 // About route
 router.get('/about', function(req, res) {
-	res.render('pages/about');
+	var users = [
+		{name: "John", email:"email@ex.com"},
+		{name: "George", email:"beatles@net.edu"}
+	];
+	res.render('pages/about', {users: users});
 });
 // Contact route
 router.get('/contact', function(req, res) {
