@@ -9,7 +9,7 @@ module.exports = router;
 
 // Home route
 router.get('/', function(req, res) { 
-	res.render('pages/index');
+	res.render('pages/home');
 });
 // About route
 router.get('/about', function(req, res) {
@@ -24,5 +24,5 @@ router.get('/contact', function(req, res) {
 	res.render('pages/contact');
 });
 router.post('/contact', function (req, res) {
-	
+	res.send('Thank you for contacting us, ' + req.body.name);
 });
