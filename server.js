@@ -1,10 +1,18 @@
 var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
 var app = express();
 var port = 8080;
+
+// Use ejs and express layouts
+app.set('view engine', 'ejs');
+app.use(expressLayouts);
 
 // Show app where routes are
 var router = require('./app/routes');
 app.use('/', router); // (express middleware function)
+
+// Set static files location
+app.use(express.static(__dirname + '/public'));
 
 // Start the server
 app.listen(port, function() {

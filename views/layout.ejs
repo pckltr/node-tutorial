@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home - Node Tutorial</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-inverse">
+			<a href="/" class="navbar-brand">Node Tutorial</a>
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="/">Home</a>
+					<a href="/about">About</a>
+					<a href="/contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<%- defineContent('hero') %>
+
+	<main>
+		<div class="container">
+			<%- body %>
+		</div>
+	</main>
+
+	
+	<footer>
+		Copyright &copy; 2016
+	</footer>
+</body>
+</html>
