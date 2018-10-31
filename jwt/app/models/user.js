@@ -1,4 +1,4 @@
-// Instanec of mongoose and schema
+// Instance of mongoose and schema
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
